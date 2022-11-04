@@ -1,7 +1,7 @@
 this repo follows [this tutorial](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/).
 
 
-create `.env.dev` file in the root directory.
+create `.env` file in the root directory.
 ```
 DEBUG=1
 SECRET_KEY=foo
@@ -16,6 +16,6 @@ DATABASE=postgres
 ```
 
 ```
-docker-compose up -d --build
+docker-compose --env-file .env up -d --build
 ```
 
